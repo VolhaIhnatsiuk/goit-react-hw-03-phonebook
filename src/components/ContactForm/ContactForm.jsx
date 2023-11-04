@@ -12,10 +12,10 @@ const schema = Yup.object().shape({
 
 export class ContactForm extends Component {
 
-handleInputChange = evt => {
-const { value, name } = evt.target;
-this.setState({ [name]: value.trim() });
-};
+// handleInputChange = evt => {
+// const { value, name } = evt.target;
+// this.setState({ [name]: value.trim() });
+// };
     
 handleSubmit = (values, { resetForm }) => {
 this.props.onSubmit(values);
@@ -36,7 +36,7 @@ resetForm();
                         <Label htmlFor="name">
                             Name
                             <StyledField
-                                onInput={this.handleInputChange}
+                                // onInput={this.handleInputChange}
                                 type="text"
                                 name="name"
                                 required />
@@ -45,7 +45,7 @@ resetForm();
                         <Label htmlFor="number">
                             Number
                             <StyledField
-                                onInput={this.handleInputChange}
+                                // onInput={this.handleInputChange}
                                 type="tel"
                                 name="number"
                                 placeholder="+48 000 000 000"
